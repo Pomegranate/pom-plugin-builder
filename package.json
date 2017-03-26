@@ -19,7 +19,7 @@
     "debug": "^2.6.2",
     "lodash": "^4.17.4",
     "parent-require": "^1.0.0",
-    "pom-framework-utils": "^0.0.2"
+    "pom-framework-utils": "^0.0.3"
   },
   "devDependencies": {
     "magnum-di": "^2.2.3",
