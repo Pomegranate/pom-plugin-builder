@@ -1,0 +1,31 @@
+{
+  "name": "pom-plugin-builder",
+  "version": "0.0.0",
+  "description": "Ingests JS modules, outputs plugins for use by the Pomegranate framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test tap -R spec --cov test/unit test/integration",
+    "test:report": "NODE_ENV=test tap -R spec --cov --coverage-report=lcov test/unit/",
+    "test:file": "NODE_ENV=test tap -R spec --cov"
+  },
+  "keywords": [
+    "Pomegranate",
+    "structural"
+  ],
+  "author": "Jim Bulkowski <jim.b@paperelectron.com> (http://paperelectron.com)",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "debug": "^2.6.2",
+    "lodash": "^4.17.4",
+    "parent-require": "^1.0.0",
+    "pom-framework-utils": "^0.0.2"
+  },
+  "devDependencies": {
+    "magnum-di": "^2.2.3",
+    "mockery": "^2.0.0",
+    "pom-test-harness": "^1.0.0",
+    "pom-test-stubs": "^1.0.0",
+    "tap": "^10.3.0"
+  }
+}
