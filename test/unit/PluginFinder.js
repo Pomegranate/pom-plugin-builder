@@ -14,11 +14,7 @@ const path = require('path')
 const fs = require('fs')
 
 tap.test('Finding Framework Plugins.', (t) => {
-  console.log(__dirname);
-  console.log(path.join(__dirname, '../mocks/unit/pluginFinder/onlyFrameworkPlugin'));
-  console.log(fs.readdirSync(path.join(__dirname, '../mocks/unit/pluginFinder/onlyFrameworkPlugin')));
-  let mockDir = mocks.findMockDir(__dirname, '../mocks/unit/pluginFinder/onlyFrameworkPlugin')
-  console.log(mockDir);
+  let mockDir = mocks.findMockDir(__dirname, '../mocks/unit/PluginFinder/onlyFrameworkPlugin')
   let mockedDependencies = []
   let mockedApplication = mocks.registerMocks(mockDir, mockedDependencies)
   let frameworkInjector = mocks.mockFrameworkInjector(false, {}, mockDir)
@@ -36,7 +32,7 @@ tap.test('Finding Framework Plugins.', (t) => {
 })
 
 tap.test('Finding internal Plugins', (t) => {
-  let mockDir = mocks.findMockDir(__dirname, '../mocks/unit/pluginFinder/onlyInternalPlugins')
+  let mockDir = mocks.findMockDir(__dirname, '../mocks/unit/PluginFinder/onlyInternalPlugins')
   let mockedDependencies = []
   let mockedApplication = mocks.registerMocks(mockDir, mockedDependencies)
   let frameworkInjector = mocks.mockFrameworkInjector(false, {}, mockDir)
@@ -60,7 +56,7 @@ tap.test('Finding internal Plugins', (t) => {
 })
 
 tap.test('Finding external Plugins', (t) => {
-  let mockDir = mocks.findMockDir(__dirname, '../mocks/unit/pluginFinder/onlyExternalPlugins')
+  let mockDir = mocks.findMockDir(__dirname, '../mocks/unit/PluginFinder/onlyExternalPlugins')
   let mockedDependencies = ['pomegranate-test-plugin']
   let mockedApplication = mocks.registerMocks(mockDir, mockedDependencies)
   let frameworkInjector = mocks.mockFrameworkInjector(false, {pluginDirectory: false}, mockDir)
