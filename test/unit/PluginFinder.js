@@ -13,6 +13,7 @@ const PluginFinder = require('../../lib/PluginFinder')
 
 tap.test('Finding Framework Plugins.', (t) => {
   let mockDir = mocks.findMockDir(__dirname, '../mocks/unit/pluginFinder/onlyFrameworkPlugin')
+  console.log(mockDir);
   let mockedDependencies = []
   let mockedApplication = mocks.registerMocks(mockDir, mockedDependencies)
   let frameworkInjector = mocks.mockFrameworkInjector(false, {}, mockDir)
