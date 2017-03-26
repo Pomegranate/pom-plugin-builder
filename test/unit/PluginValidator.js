@@ -12,7 +12,7 @@ const PluginFinder = require('../../lib/PluginFinder')
 const PluginValidator = require('../../lib/PluginValidator')
 
 tap.test('Validating plugins', (t) => {
-  let mockDir = mocks.findMockDir(__dirname, '../mocks/unit/pluginValidator/mixedPlugins')
+  let mockDir = mocks.findMockDir(__dirname, '../mocks/unit/PluginValidator/mixedPlugins')
   let mockedDependencies = []
   let mockedApplication = mocks.registerMocks(mockDir, mockedDependencies)
   let frameworkInjector = mocks.mockFrameworkInjector(false, {}, mockDir)
@@ -32,7 +32,7 @@ tap.test('Validating plugins', (t) => {
 })
 
 tap.test('Validating nested multiple plugins', (t) => {
-  let mockDir = mocks.findMockDir(__dirname, '../mocks/unit/pluginValidator/multiplePlugins')
+  let mockDir = mocks.findMockDir(__dirname, '../mocks/unit/PluginValidator/multiplePlugins')
   let mockedDependencies = []
   let mockedApplication = mocks.registerMocks(mockDir, mockedDependencies)
   let frameworkInjector = mocks.mockFrameworkInjector(false, {}, mockDir)
@@ -51,7 +51,7 @@ tap.test('Validating nested multiple plugins', (t) => {
 })
 
 tap.test('Handling non existent plugins.', (t) => {
-  let mockDir = mocks.findMockDir(__dirname, '../mocks/unit/pluginValidator/mixedPlugins')
+  let mockDir = mocks.findMockDir(__dirname, '../mocks/unit/PluginValidator/mixedPlugins')
   let frameworkInjector = mocks.mockFrameworkInjector(false, {}, mockDir)
 
   let FakeModules = [{
