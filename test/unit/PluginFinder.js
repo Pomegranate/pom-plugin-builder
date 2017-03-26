@@ -10,8 +10,13 @@
 const tap = require('tap')
 const mocks = require('pom-test-stubs')
 const PluginFinder = require('../../lib/PluginFinder')
+const path = require('path')
+const fs = require('fs')
 
 tap.test('Finding Framework Plugins.', (t) => {
+  console.log(__dirname);
+  console.log(path.join(__dirname, '../mocks/unit/pluginFinder/onlyFrameworkPlugin'));
+  console.log(fs.readdirSync(path.join(__dirname, '../mocks/unit/pluginFinder/onlyFrameworkPlugin')));
   let mockDir = mocks.findMockDir(__dirname, '../mocks/unit/pluginFinder/onlyFrameworkPlugin')
   console.log(mockDir);
   let mockedDependencies = []
